@@ -1,0 +1,40 @@
+<header class="header">
+  @if (pageWidth < 990) {
+    <div class="burger icon-btn">
+      <img src="assets/img/burger-lines.svg" alt="" />
+    </div>
+  }
+
+  <div class="logo">
+    <img src="assets/img/tile-logo.svg" alt="" />
+  </div>
+
+  <app-navbar #headerNavbar></app-navbar>
+
+  <div class="other-btns">
+    @if (pageWidth < 990) {
+      <a href="#" class="icon-btn">
+        <img src="assets/img/restart.svg" alt="" />
+      </a>
+    }
+
+    <app-header-search [searchInputWidth]="headerNavbar.offsetWidth"></app-header-search>
+
+    <button class="add btn btn--reset btn--opacity icon-btn">
+      <img src="assets/img/plus.svg" alt="" />
+    </button>
+
+    <button class="notifications btn btn--reset btn--opacity icon-btn">
+      <span class="badge d-none-max-lg">32</span>
+      <img src="assets/img/notification.svg" alt="" />
+    </button>
+
+    @if (pageWidth > 990) {
+      <div class="profile">
+        <button class="avatar btn btn--reset btn--opacity">
+          <img src="assets/img/avatar.png" alt="" />
+        </button>
+      </div>
+    }
+  </div>
+</header>
